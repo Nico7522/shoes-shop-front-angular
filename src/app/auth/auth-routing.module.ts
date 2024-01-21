@@ -7,7 +7,7 @@ import { alertGuard } from '../guards/alert.guard';
 
 const routes: Routes = [
   { path: '', component: AuthComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', canDeactivate: [alertGuard], component: LoginComponent },
   {
     path: 'register',
     canDeactivate: [alertGuard],

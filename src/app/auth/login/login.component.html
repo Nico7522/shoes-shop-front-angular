@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="form">
+  <form (ngSubmit)="handleSubmit()" [formGroup]="loginForm">
+    <div class="field">
+      <label for="email">Email</label>
+      <input formControlName="email" type="email" />
+      <div
+        [hidden]="displayError(loginForm, 'email', 'pattern')"
+        class="alert-message"
+      >
+        Email not valid
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input formControlName="password" type="password" />
+      <div
+        [hidden]="displayError(loginForm, 'password', 'pattern')"
+        class="alert-message"
+      >
+        Password not valid
+      </div>
+    </div>
+    <button [disabled]="!loginForm.valid" type="submit" class="btn btn-success">
+      Login
+    </button>
+  </form>
+</div>
