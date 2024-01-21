@@ -1,0 +1,15 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/">Acceuil</a>
+  </li>
+  <div class="auth">
+    <li ngbNavItem>
+      <a ngbNavLink routerLink="/auth/login">Se connecter</a>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink routerLink="/auth/register">S'enregister</a>
+    </li>
+  </div>
+</ul>
+
+<div [ngbNavOutlet]="nav"></div>
