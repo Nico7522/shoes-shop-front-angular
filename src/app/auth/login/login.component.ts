@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, inject } from '@angular/core';
 import { displayErrorForm } from '../../utils/displayErrorForm';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { isDirty } from '../../guards/interfaces/alert-interface';

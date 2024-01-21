@@ -4,14 +4,16 @@ import {
   NgbDatepickerModule,
   NgbModal,
 } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.css',
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrl: './modal.component.css',
 })
-export class NavBarComponent {
+export class ModalComponent {
   private modalService = inject(NgbModal);
   closeResult = '';
+
   open(content: TemplateRef<any>) {
     this.modalService
       .open(content, { ariaLabelledBy: 'modal-basic-title' })

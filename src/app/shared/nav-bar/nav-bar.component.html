@@ -2,13 +2,17 @@
   <li ngbNavItem>
     <a ngbNavLink routerLink="/">Acceuil</a>
   </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/product">Produits</a>
+  </li>
   <div class="auth">
     <li ngbNavItem>
-      <a ngbNavLink routerLink="/auth/login">Se connecter</a>
+      <app-modal />
     </li>
     <li ngbNavItem>
       <a ngbNavLink routerLink="/auth/register">S'enregister</a>
     </li>
+    
   </div>
 </ul>
 

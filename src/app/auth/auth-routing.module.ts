@@ -4,6 +4,7 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { alertGuard } from '../guards/alert.guard';
+import { ModalComponent } from '../shared/modal/modal.component';
 
 const routes: Routes = [
   { path: '', component: AuthComponent },
