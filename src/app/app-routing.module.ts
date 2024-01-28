@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './shared/home/home.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
@@ -11,7 +13,11 @@ const routes: Routes = [
     path: 'user',
     loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
-  { path: 'product', loadChildren: () => import('./product/product.module').then(m => m.ProductModule) },
+  {
+    path: 'product',
+    loadChildren: () =>
+      import('./product/product.module').then((m) => m.ProductModule),
+  },
 ];
 
 @NgModule({
